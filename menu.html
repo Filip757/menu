@@ -10,7 +10,6 @@
   <h1 id="title"></h1>
   <p id="description"></p>
 
-  <!-- 🍽️ DANIA -->
   <div class="dish">
     <h3>🥘 Paella</h3>
     <p id="paella"></p>
@@ -29,64 +28,64 @@
   <button id="changeLangBtn" onclick="goBack()"></button>
 
 <script>
-  const params = new URLSearchParams(window.location.search);
-  const lang = params.get("lang") || "en";
+const params = new URLSearchParams(window.location.search);
+const lang = params.get("lang") || "en";
 
-  const translations = {
-    pl: {
-      title: "Witamy w naszej restauracji",
-      description: "Zapraszamy do naszego menu",
-      changeLang: "Zmień język",
-      paella: "Tradycyjne hiszpańskie danie z ryżu, szafranu i owoców morza.",
-      bravas: "Smażone ziemniaki z pikantnym sosem pomidorowym lub aioli.",
-      gambas: "Krewetki smażone na oliwie z czosnkiem i chili."
-    },
-    en: {
-      title: "Welcome to our restaurant",
-      description: "Check out our menu",
-      changeLang: "Change language",
-      paella: "Traditional Spanish rice dish with saffron and seafood.",
-      bravas: "Fried potatoes with spicy tomato sauce or aioli.",
-      gambas: "Shrimp fried in olive oil with garlic and chili."
-    },
-    es: {
-      title: "Bienvenido a nuestro restaurante",
-      description: "Consulta nuestro menú",
-      changeLang: "Cambiar idioma",
-      paella: "Arroz tradicional español con azafrán y mariscos.",
-      bravas: "Patatas fritas con salsa picante o alioli.",
-      gambas: "Gambas fritas con ajo y chile."
-    },
-    fr: {
-      title: "Bienvenue dans notre restaurant",
-      description: "Consultez notre menu",
-      changeLang: "Changer la langue",
-      paella: "Plat de riz espagnol traditionnel au safran et fruits de mer.",
-      bravas: "Pommes de terre frites avec sauce piquante ou aïoli.",
-      gambas: "Crevettes frites à l’ail et au piment."
-    },
-    de: {
-      title: "Willkommen in unserem Restaurant",
-      description: "Sehen Sie sich unsere Speisekarte an",
-      changeLang: "Sprache ändern",
-      paella: "Traditionelles spanisches Reisgericht mit Safran und Meeresfrüchten.",
-      bravas: "Frittierte Kartoffeln mit scharfer Tomatensauce oder Aioli.",
-      gambas: "Garnelen in Olivenöl mit Knoblauch und Chili."
-    }
-  };
-
-  document.getElementById("title").innerText = translations[lang].title;
-  document.getElementById("description").innerText = translations[lang].description;
-
-  document.getElementById("paella").innerText = translations[lang].paella;
-  document.getElementById("bravas").innerText = translations[lang].bravas;
-  document.getElementById("gambas").innerText = translations[lang].gambas;
-
-  document.getElementById("changeLangBtn").innerText = translations[lang].changeLang;
-
-  function goBack() {
-    window.location.href = "https://filip757.github.io/test1/";
+const translations = {
+  pl: {
+    title: "Witamy w naszej restauracji",
+    description: "Zapraszamy do naszego menu",
+    changeLang: "Zmień język",
+    paella: "Tradycyjne hiszpańskie danie z ryżu, szafranu i owoców morza.",
+    bravas: "Smażone ziemniaki z pikantnym sosem pomidorowym lub aioli.",
+    gambas: "Krewetki smażone na oliwie z czosnkiem i chili."
+  },
+  en: {
+    title: "Welcome to our restaurant",
+    description: "Check out our menu",
+    changeLang: "Change language",
+    paella: "Traditional Spanish rice dish with saffron and seafood.",
+    bravas: "Fried potatoes with spicy tomato sauce or aioli.",
+    gambas: "Shrimp fried in olive oil with garlic and chili."
+  },
+  es: {
+    title: "Bienvenido a nuestro restaurante",
+    description: "Consulta nuestro menú",
+    changeLang: "Cambiar idioma",
+    paella: "Arroz español tradicional con azafrán y mariscos.",
+    bravas: "Patatas fritas con salsa picante o alioli.",
+    gambas: "Gambas salteadas con ajo y chile."
+  },
+  fr: {
+    title: "Bienvenue dans notre restaurant",
+    description: "Consultez notre menu",
+    changeLang: "Changer la langue",
+    paella: "Riz espagnol traditionnel au safran et fruits de mer.",
+    bravas: "Pommes de terre frites avec sauce piquante ou aïoli.",
+    gambas: "Crevettes à l’ail et au piment."
+  },
+  de: {
+    title: "Willkommen in unserem Restaurant",
+    description: "Sehen Sie sich unser Menü an",
+    changeLang: "Sprache ändern",
+    paella: "Spanisches Reisgericht mit Safran und Meeresfrüchten.",
+    bravas: "Frittierte Kartoffeln mit scharfer Sauce oder Aioli.",
+    gambas: "Garnelen mit Knoblauch und Chili."
   }
+};
+
+document.getElementById("title").innerText = translations[lang].title;
+document.getElementById("description").innerText = translations[lang].description;
+
+document.getElementById("paella").innerText = translations[lang].paella;
+document.getElementById("bravas").innerText = translations[lang].bravas;
+document.getElementById("gambas").innerText = translations[lang].gambas;
+
+document.getElementById("changeLangBtn").innerText = translations[lang].changeLang;
+
+function goBack() {
+  window.location.href = "https://filip757.github.io/test1/";
+}
 </script>
 
 </body>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <h1 id="title"></h1>
+  <p id="description"></p>
+
+
+  <button id="changeLangBtn" onclick="goBack()"></button>
+
+  <script>
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") || "en";
+
+
+    const translations = {
+      pl: {
+        title: "Witamy w naszej restauracji",
+        description: "Zapraszamy do naszego menu",
+        changeLang: "Zmień język"
+      },
+      en: {
+        title: "Welcome to our restaurant",
+        description: "Check out our menu",
+        changeLang: "Change language"
+      },
+      es: {
+        title: "Bienvenido a nuestro restaurante",
+        description: "Consulta nuestro menú",
+        changeLang: "Cambiar idioma"
+      },
+      fr: {
+        title: "Bienvenue dans notre restaurant",
+        description: "Consultez notre menu",
+        changeLang: "Changer la langue"
+      },
+      de: {
+        title: "Willkommen in unserem Restaurant",
+        description: "Sehen Sie sich unsere Speisekarte an",
+        changeLang: "Sprache ändern"
+      }
+    };
+
+
+    document.getElementById("title").innerText = translations[lang].title;
+    document.getElementById("description").innerText = translations[lang].description;
+    document.getElementById("changeLangBtn").innerText = translations[lang].changeLang;
+
+
+    function goBack() {
+      window.location.replace("index.html");
+    }
+  </script>
+
+</body>
+</html>
